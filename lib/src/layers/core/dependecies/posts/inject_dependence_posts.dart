@@ -1,5 +1,7 @@
 import 'imports.dart';
 
+export '../../../domain/repositorys/posts/get_post_domain_repository.dart';
+
 final getIt = GetIt.instance;
 
 initInject() {

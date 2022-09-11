@@ -1,5 +1,5 @@
 import '../../entitys/post_entity.dart';
-import '../../repositorys/get_post_domain_repository.dart';
+import '../../repositorys/posts/get_post_domain_repository.dart';
 import 'get_post_usecase_abs.dart';
 
 class GetPostUsecaseImplemente implements GetPostUsecase {
