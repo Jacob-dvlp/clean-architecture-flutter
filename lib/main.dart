@@ -5,6 +5,6 @@ import 'src/layers/core/dependecies/posts/inject_dependence_posts.dart'
     as dependecieposts;
 
 void main() {
-  dependecieposts.initInject();
+  dependecieposts.initInjectPost();
   runApp(const AppHome());
 }

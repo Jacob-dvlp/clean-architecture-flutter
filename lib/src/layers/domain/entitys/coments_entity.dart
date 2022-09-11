@@ -1,17 +1,17 @@
 import 'package:equatable/equatable.dart';
 
 class ComentsEntity extends Equatable {
-  final int postId;
-  final int id;
-  final String name;
-  final String email;
+  final int idpost;
+  final int idComents;
+  final String nameUser;
+  final String emailComents;
   final String bodycoments;
 
   const ComentsEntity(
-      {required this.postId,
-      required this.id,
-      required this.name,
-      required this.email,
+      {required this.idpost,
+      required this.idComents,
+      required this.nameUser,
+      required this.emailComents,
       required this.bodycoments});
 
   @override

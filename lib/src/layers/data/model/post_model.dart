@@ -1,16 +1,16 @@
 
 import 'dart:convert';
 
-import 'package:clean_archecterter/src/layers/domain/entitys/post_entity.dart';
+import '../../domain/entitys/post_entity.dart';
 
-List<ModelPostDto> modelPostDtoFromJson(String str) => List<ModelPostDto>.from(
-    json.decode(str).map((x) => ModelPostDto.fromJson(x)));
+List<ModelPost> modelPostFromJson(String str) => List<ModelPost>.from(
+    json.decode(str).map((x) => ModelPost.fromJson(x)));
 
-String modelPostDtoToJson(List<ModelPostDto> data) =>
+String modelPostToJson(List<ModelPost> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class ModelPostDto extends PostEntity {
-  ModelPostDto({
+class ModelPost extends PostEntity {
+  ModelPost({
     required this.userId,
     required this.id,
     required this.title,
@@ -22,7 +22,7 @@ class ModelPostDto extends PostEntity {
   final String title;
   final String body;
 
-  factory ModelPostDto.fromJson(Map<String, dynamic> json) => ModelPostDto(
+  factory ModelPost.fromJson(Map<String, dynamic> json) => ModelPost(
         userId: json["userId"],
         id: json["id"],
         title: json["title"],

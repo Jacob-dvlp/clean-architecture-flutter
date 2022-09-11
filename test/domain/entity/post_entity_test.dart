@@ -4,12 +4,12 @@ import 'package:flutter_test/flutter_test.dart';
 main() {
   test('Espero que a entidade n seja nula', () {
     PostEntity entity = PostEntity(
-        userId: 2, id: 2, title: 'Unita', body: 'Vencedor das Eleições 2022');
+        userIdPost: 2, idPost: 2, titlePost: 'Unita', bodyPost: 'Vencedor das Eleições 2022');
     expect(entity, isNotNull);
   });
   test('Espero que  o id seja 2 ', () {
     PostEntity entity = PostEntity(
-        userId: 2, id: 2, title: 'Unita', body: 'Vencedor das Eleições 2022');
-    expect(entity.id, 2);
+        userIdPost: 2, idPost: 2, titlePost: 'Unita', bodyPost: 'Vencedor das Eleições 2022');
+    expect(entity.idPost, 2);
   });
 }
