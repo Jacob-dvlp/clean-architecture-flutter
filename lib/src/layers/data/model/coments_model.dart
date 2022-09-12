@@ -3,10 +3,7 @@ import 'dart:convert';
 import '../../domain/entitys/coments_entity.dart';
 
 List<ModelComents> modelComentsFromJson(String str) => List<ModelComents>.from(
-      json.decode(str).map(
-            (e) => ModelComents.fromJson(e),
-          ),
-    );
+    json.decode(str).map((e) => ModelComents.fromJson(e)));
 
 class ModelComents extends ComentsEntity {
   final int postId;
@@ -31,7 +28,7 @@ class ModelComents extends ComentsEntity {
   factory ModelComents.fromJson(Map<String, dynamic> json) => ModelComents(
       postId: json["postId"],
       id: json["id"],
-      name: json["id"],
-      email: json["id"],
-      body: json["id"]);
+      name: json["name"],
+      email: json["email"],
+      body: json["body"]);
 }
