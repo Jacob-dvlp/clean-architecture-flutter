@@ -1,27 +1,29 @@
+import '../../../../presetation/controllers/cubit_coment/cubit/get_coments_cubit.dart';
 import 'imports.dart';
-
-
 
 final getIt = GetIt.instance;
 
-initInjectComets() {
+void initInjectComets() {
   //http
   getIt.registerLazySingleton<HttpServices>(
     () => HttpServicesImplement(),
   );
-  getIt.resetLazySingleton<GetComentsDatasource>(
-    instance: GetComentRemoteDatasourceImplement(
-      httpServices: getIt.call(),
-    ),
+  
+  getIt.registerFactory(() => GetComentsCubit(getComentsUseCase: getIt.call()));
+
+  getIt.registerLazySingleton<GetComentsDatasource>(
+    () => GetComentRemoteDatasourceImplement(getIt()),
   );
-  getIt.registerLazySingleton<GetComentesRepository>(
+
+  getIt.registerLazySingleton<GetComentsRepository>(
     () => GetComentsRepositoryDataImplement(
-      getComentsDatasource: getIt.call(),
+      getIt(),
     ),
   );
+
   getIt.registerLazySingleton<GetComentsUseCase>(
     () => GetComentsUsecaseImplemente(
-      getComentsRepsioty: getIt.call(),
+      getIt(),
     ),
   );
 }

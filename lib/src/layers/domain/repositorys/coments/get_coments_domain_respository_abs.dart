@@ -1,6 +1,5 @@
-
 import '../../entitys/coments_entity.dart';
 
-abstract class GetComentesRepository{
+abstract class GetComentsRepository {
   Future<List<ComentsEntity>> callComents();
 }

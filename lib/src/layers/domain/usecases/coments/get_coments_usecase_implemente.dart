@@ -3,10 +3,10 @@ import '../../repositorys/coments/get_coments_domain_respository_abs.dart';
 import 'get_coments_usecase_abs.dart';
 
 class GetComentsUsecaseImplemente implements GetComentsUseCase {
-  final GetComentesRepository getComentsRepsioty;
+  GetComentsRepository getComentsRepsioty;
 
-  GetComentsUsecaseImplemente({required this.getComentsRepsioty});
+  GetComentsUsecaseImplemente(this.getComentsRepsioty);
   @override
-  Future<List<ComentsEntity>> call() async =>
+  Future<List<ComentsEntity>> callComents() async =>
       await getComentsRepsioty.callComents();
 }
