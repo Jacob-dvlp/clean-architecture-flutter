@@ -4,12 +4,15 @@ import 'package:clean_archecterter/src/presetation/controllers/cubit_coment/cubi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../layers/core/dependecies/coments/inject_dependecie_coments.dart'
+    as coment;
+
 class ComentPage extends StatelessWidget {
   final PostEntity postEntity;
   const ComentPage({Key? key, required this.postEntity}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
+    coment.initInjectComets();
     return Scaffold(
       appBar: AppBar(
         title: Text(postEntity.idPost.toString()),

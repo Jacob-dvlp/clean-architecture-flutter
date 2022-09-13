@@ -3,10 +3,10 @@ class PostEntity {
   late final int? idPost;
   late final String? titlePost;
   late final String? bodyPost;
-  PostEntity({
-    required this.userIdPost,
-    required this.idPost,
-    required this.titlePost,
-    required this.bodyPost,
-  });
+  PostEntity(
+  {  this.userIdPost,
+    this.idPost,
+    this.titlePost,
+    this.bodyPost,}
+  );
 }

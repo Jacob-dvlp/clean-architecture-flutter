@@ -13,6 +13,7 @@ void initInjectComets() {
     () => GetComentRemoteDatasourceImplement(getIt()),
   );
 
+
   getIt.registerLazySingleton<GetComentsRepository>(
     () => GetComentsRepositoryDataImplement(
       getIt(),
