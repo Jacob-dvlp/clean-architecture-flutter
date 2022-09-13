@@ -5,10 +5,8 @@ final getIt = GetIt.instance;
 
 void initInjectComets() {
   //http
-  getIt.registerLazySingleton<HttpServices>(
-    () => HttpServicesImplement(),
-  );
-  
+  getIt.get<HttpServices>();
+
   getIt.registerFactory(() => GetComentsCubit(getComentsUseCase: getIt.call()));
 
   getIt.registerLazySingleton<GetComentsDatasource>(

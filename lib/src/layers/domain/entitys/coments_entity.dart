@@ -1,6 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-class ComentsEntity extends Equatable {
+class ComentsEntity {
   final int idpost;
   final int idComents;
   final String nameUser;
@@ -13,7 +11,4 @@ class ComentsEntity extends Equatable {
       required this.nameUser,
       required this.emailComents,
       required this.bodycoments});
-
-  @override
-  List<Object?> get props => [props];
 }

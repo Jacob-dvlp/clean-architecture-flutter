@@ -1,4 +1,3 @@
-import '../../../../app/constants/api/constants_parames.dart';
 import '../../../../core/domain/services/http_services.dart';
 import '../../../domain/entitys/coments_entity.dart';
 import '../../model/coments_model.dart';
@@ -8,12 +7,12 @@ class GetComentRemoteDatasourceImplement implements GetComentsDatasource {
   final HttpServices httpServices;
   GetComentRemoteDatasourceImplement(this.httpServices);
   @override
-  Future<List<ComentsEntity>> callComents() async {
+  Future<List<ComentsEntity>> callComents(int id) async {
     List<ModelComents> data = [];
-    final response = await httpServices.get(coments);
-    print(response.body);
-    List<ModelComents> modelComents = modelComentsFromJson(response.body);
+    final response = await httpServices.get("posts/$id/comments");
+    final modelComents = modelComentsFromJson(response.body);
     data = modelComents;
+    print(response.body);
     return data;
   }
 }

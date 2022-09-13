@@ -1,3 +1,4 @@
+import 'package:clean_archecterter/src/presetation/ui/coment_page/coment_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -28,14 +29,24 @@ class CustomHomePageBody extends StatelessWidget {
                     itemCount: post.length,
                     itemBuilder: (context, index) {
                       final PostEntity postEntity = post[index];
-                      return ListTile(
-                        leading: CircleAvatar(
-                            child: Text(postEntity.idPost!.toString())),
-                        title: Text(
-                          postEntity.titlePost!.toUpperCase(),
-                          style: const TextStyle(fontWeight: FontWeight.bold),
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ComentPage(
+                                        postEntity: postEntity,
+                                      )));
+                        },
+                        child: ListTile(
+                          leading: CircleAvatar(
+                              child: Text(postEntity.idPost!.toString())),
+                          title: Text(
+                            postEntity.titlePost!.toUpperCase(),
+                            style: const TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                          subtitle: Text(postEntity.bodyPost!),
                         ),
-                        subtitle: Text(postEntity.bodyPost!),
                       );
                     });
           }

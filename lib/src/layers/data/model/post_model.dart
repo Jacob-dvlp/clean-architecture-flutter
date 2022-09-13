@@ -6,8 +6,6 @@ import '../../domain/entitys/post_entity.dart';
 List<ModelPost> modelPostFromJson(String str) => List<ModelPost>.from(
     json.decode(str).map((x) => ModelPost.fromJson(x)));
 
-String modelPostToJson(List<ModelPost> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class ModelPost extends PostEntity {
   ModelPost({

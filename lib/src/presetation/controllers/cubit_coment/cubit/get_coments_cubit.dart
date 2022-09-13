@@ -18,8 +18,7 @@ class GetComentsCubit extends Cubit<GetComentsState> {
   Future getComents() async {
     emit(GetComentsLoading());
     try {
-      final response = await getComentsUseCase.callComents();
-      print(response);
+      final response = await getComentsUseCase.callComents(100);
       emit(GetComentsSuccess(coments: response));
     } on SocketOption {
       emit(GetComentsError());

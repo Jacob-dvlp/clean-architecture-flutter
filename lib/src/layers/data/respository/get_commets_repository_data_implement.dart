@@ -8,7 +8,7 @@ class GetComentsRepositoryDataImplement implements GetComentsRepository {
   GetComentsRepositoryDataImplement(this.getComentsDatasource);
 
   @override
-  Future<List<ComentsEntity>> callComents() async {
-    return await getComentsDatasource.callComents();
+  Future<List<ComentsEntity>> callComents(int id) async {
+    return await getComentsDatasource.callComents(id);
   }
 }
