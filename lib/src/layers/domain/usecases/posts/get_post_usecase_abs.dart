@@ -1,4 +1,4 @@
-import '../../entitys/post_entity.dart';
+import 'imports.dart';
 
 abstract class GetPostUsecase {
   Future<List<PostEntity>> callPost();

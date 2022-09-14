@@ -11,7 +11,6 @@ class GetPostRemoteDatasourcesImplement implements GetPostDatasources {
   Future<List<PostEntity>> callPost() async {
     List<PostEntity> data = [];
     final response = await httpServices.get('posts');
-    print(response.body);
     List<ModelPost> model = modelPostFromJson(response.body);
     data = model;
     return data;

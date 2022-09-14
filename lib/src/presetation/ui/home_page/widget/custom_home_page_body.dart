@@ -1,12 +1,4 @@
-import 'package:clean_archecterter/src/layers/core/dependecies/posts/imports.dart';
-import 'package:clean_archecterter/src/presetation/ui/coment_page/coment_page.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../../layers/core/dependecies/posts/inject_dependence_posts.dart'
-    as dependecie;
-import '../../../../layers/domain/entitys/post_entity.dart';
-
+import '../imports.dart';
 class CustomHomePageBody extends StatelessWidget {
   const CustomHomePageBody({Key? key}) : super(key: key);
 
@@ -33,16 +25,13 @@ class CustomHomePageBody extends StatelessWidget {
                       final PostEntity postEntity = post[index];
                       return GestureDetector(
                         onTap: () {
-                          if (!dependecie.getIt
-                              .isRegistered<PostEntity>(instance: postEntity)) {
-                            GetIt.instance.registerLazySingleton<PostEntity>(
-                                () => postEntity);
-                          }
-
+                          context
+                              .read<GetCommentsCubit>()
+                              .getComents(value: postEntity.idPost);
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ComentPage(
+                                  builder: (context) => CommentPage(
                                         postEntity: postEntity,
                                       )));
                         },

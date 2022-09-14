@@ -1,6 +1,4 @@
-import '../../entitys/post_entity.dart';
-import '../../repositorys/posts/get_post_domain_repository.dart';
-import 'get_post_usecase_abs.dart';
+import 'imports.dart';
 
 class GetPostUsecaseImplemente implements GetPostUsecase {
   final GetPostDomainRepository getPostDomainRepository;

@@ -1,5 +1,5 @@
-import '../../domain/entitys/coments_entity.dart';
+import '../../domain/entitys/comments_entity.dart';
 
-abstract class GetComentsDatasource {
-  Future<List<ComentsEntity>> callComents(int id);
+abstract class GetCommentsDatasource {
+  Future<List<CommentsEntity>> callComents(int id);
 }
