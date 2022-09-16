@@ -7,7 +7,7 @@ class HttpServicesImplement implements HttpServices {
   @override
   Future<http.Response> get<T>(String path) {
     return http.get(
-      Uri.parse("$base_url/$path"),
+      Uri.parse("$baseurl/$path"),
     );
   }
 }

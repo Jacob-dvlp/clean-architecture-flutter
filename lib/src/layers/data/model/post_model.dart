@@ -1,11 +1,9 @@
-
 import 'dart:convert';
 
 import '../../domain/entitys/post_entity.dart';
 
-List<ModelPost> modelPostFromJson(String str) => List<ModelPost>.from(
-    json.decode(str).map((x) => ModelPost.fromJson(x)));
-
+List<ModelPost> modelPostFromJson(String str) =>
+    List<ModelPost>.from(json.decode(str).map((x) => ModelPost.fromJson(x)));
 
 class ModelPost extends PostEntity {
   ModelPost({
@@ -15,10 +13,10 @@ class ModelPost extends PostEntity {
     required this.body,
   }) : super(bodyPost: body, idPost: id, titlePost: title, userIdPost: userId);
 
-  final int userId;
-  final int id;
-  final String title;
-  final String body;
+  int userId;
+  int id;
+  String title;
+  String body;
 
   factory ModelPost.fromJson(Map<String, dynamic> json) => ModelPost(
         userId: json["userId"],

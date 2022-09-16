@@ -5,14 +5,16 @@ import '../get_datasources.dart';
 
 class GetPostRemoteDatasourcesImplement implements GetPostDatasources {
   final HttpServices httpServices;
+  List<PostEntity> data = [];
 
   GetPostRemoteDatasourcesImplement(this.httpServices);
   @override
   Future<List<PostEntity>> callPost() async {
-    List<PostEntity> data = [];
     final response = await httpServices.get('posts');
-    List<ModelPost> model = modelPostFromJson(response.body);
-    data = model;
+    if (response.statusCode == 200) {
+      List<ModelPost> model = modelPostFromJson(response.body);
+      data = model;
+    }
     return data;
   }
 }

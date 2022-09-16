@@ -1,6 +1,5 @@
 import 'imports.dart';
 
-export '../../../domain/repositorys/posts/get_post_domain_repository.dart';
 
 final getIt = GetIt.instance;
 
@@ -8,10 +7,14 @@ void initInjectPost() {
   getIt.registerLazySingleton<HttpServices>(
     () => HttpServicesImplement(),
   );
-  getIt.registerFactory(() => GetPostCubit(getPostUsecase: getIt.call()));
-  
+  getIt.registerFactory(() => GetPostCubit(
+        getPostUsecase: getIt.call(),
+      ));
+
   getIt.registerLazySingleton<GetPostDatasources>(
-    () => GetPostRemoteDatasourcesImplement(getIt()),
+    () => GetPostRemoteDatasourcesImplement(
+      getIt(),
+    ),
   );
 
   getIt.registerLazySingleton<GetPostDomainRepository>(
