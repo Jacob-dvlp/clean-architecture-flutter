@@ -5,7 +5,7 @@
 
 <b>Objectivo do app plática  dos conceitos de DDD, SOLID e TDD </b>   
 
-![cap](https://github.com/Jacob-dvlp/clean-architecture-flutte/blob/master/cap.jpg)
+![cap](https://github.com/Jacob-dvlp/clean-architecture-flutter/blob/master/cap.jpg)
 
 
 <p> Este aplicativo  tem como objetivo buscar os dados de API e  renderizar  na tela do dentro do aplicativo </b>  </p>
