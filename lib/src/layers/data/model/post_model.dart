@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import '../../domain/entitys/post_entity.dart';
+import '../../domain/entites/post_entity.dart';
 
 List<ModelPost> modelPostFromJson(String str) =>
     List<ModelPost>.from(json.decode(str).map((x) => ModelPost.fromJson(x)));

@@ -1,5 +1,5 @@
-import '../../entitys/comments_entity.dart';
+import 'package:clean_archecterter/src/layers/domain/usecases/comments/imports.dart';
 
 abstract class GetCommentsRepository {
-  Future<List<CommentsEntity>> callComents(int id);
+  Future<List<CommentsEntite>> callComents(int id);
 }

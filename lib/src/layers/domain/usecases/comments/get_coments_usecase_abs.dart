@@ -1,5 +1,5 @@
 import 'imports.dart';
 
 abstract class GetCommentsUseCase {
-  Future<List<CommentsEntity>> callComents(int id);
+  Future<List<CommentsEntite>> callComents(int id);
 }

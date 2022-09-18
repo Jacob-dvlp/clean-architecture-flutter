@@ -5,7 +5,7 @@ class GetComentsUsecaseImplemente implements GetCommentsUseCase {
 
   GetComentsUsecaseImplemente(this.getComentsRepsioty);
   @override
-  Future<List<CommentsEntity>> callComents(int id) async {
+  Future<List<CommentsEntite>> callComents(int id) async {
     return await getComentsRepsioty.callComents(id);
   }
 }

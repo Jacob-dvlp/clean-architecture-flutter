@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../../layers/domain/entitys/post_entity.dart';
+import '../../../layers/domain/entites/post_entity.dart';
 import '../../../layers/domain/usecases/posts/get_post_usecase_abs.dart';
 
 part 'get_post_state.dart';

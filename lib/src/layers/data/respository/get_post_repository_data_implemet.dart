@@ -1,5 +1,5 @@
 import '../../core/dependecies/posts/imports.dart';
-import '../../domain/entitys/post_entity.dart';
+import '../../domain/entites/post_entity.dart';
 
 class GetPostRepositoryDataImplemet implements GetPostDomainRepository {
   final GetPostDatasources getPostDatasources;

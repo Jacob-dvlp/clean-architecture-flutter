@@ -1,12 +1,8 @@
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
+import 'package:clean_archecterter/src/layers/domain/usecases/comments/imports.dart';
+import 'package:clean_archecterter/src/presetation/ui/comment_page/imports.dart';
 import 'package:equatable/equatable.dart';
-
-import '../../../../layers/core/dependecies/coments/imports.dart';
-import '../../../../layers/domain/entitys/comments_entity.dart';
-import '../../../../layers/domain/entitys/post_entity.dart';
-import '../../../../layers/domain/usecases/comments/get_coments_usecase_abs.dart';
 
 part 'get_comments_state.dart';
 

@@ -1,5 +1,5 @@
 import '../../../../core/domain/services/http_services.dart';
-import '../../../domain/entitys/post_entity.dart';
+import '../../../domain/entites/post_entity.dart';
 import '../../model/post_model.dart';
 import '../get_datasources.dart';
 

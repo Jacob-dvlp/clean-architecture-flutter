@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import '../../domain/entitys/comments_entity.dart';
+import 'package:clean_archecterter/src/layers/domain/usecases/comments/imports.dart';
 
 List<ModelComents> modelComentsFromJson(String str) => List<ModelComents>.from(
     json.decode(str).map((e) => ModelComents.fromJson(e)));
 
-class ModelComents extends CommentsEntity {
+class ModelComents extends CommentsEntite {
   const ModelComents(
       {required this.postId,
       required this.id,

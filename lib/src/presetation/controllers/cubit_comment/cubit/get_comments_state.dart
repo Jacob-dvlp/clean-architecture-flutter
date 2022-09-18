@@ -17,7 +17,7 @@ class GetComentsLoading extends GetCommentsState {
 }
 
 class GetComentsSuccess extends GetCommentsState {
-  final List<CommentsEntity> coments;
+  final List<CommentsEntite> coments;
   const GetComentsSuccess({required this.coments});
   @override
   List<Object?> get props => [coments];

@@ -1,3 +1,4 @@
+
 import '../imports.dart';
 
 class CustomCommetPageBody extends StatelessWidget {
@@ -28,7 +29,7 @@ class CustomCommetPageBody extends StatelessWidget {
                 : ListView.builder(
                     itemCount: coments.length,
                     itemBuilder: (context, index) {
-                      final CommentsEntity modelComents = coments[index];
+                      final CommentsEntite modelComents = coments[index];
                       return ListTile(
                         leading: CircleAvatar(
                           child: Text(modelComents.idComents.toString()),

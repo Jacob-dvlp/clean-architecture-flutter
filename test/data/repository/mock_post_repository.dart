@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:clean_archecterter/src/layers/core/dependecies/posts/imports.dart';
 import 'package:clean_archecterter/src/layers/data/model/post_model.dart';
-import 'package:clean_archecterter/src/layers/domain/entitys/post_entity.dart';
+import 'package:clean_archecterter/src/layers/domain/entites/post_entity.dart';
 
 class MockPostRepository implements GetPostDomainRepository {
   @override

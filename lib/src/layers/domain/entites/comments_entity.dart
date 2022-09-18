@@ -1,11 +1,11 @@
-class CommentsEntity {
+class CommentsEntite {
   final int idpost;
   final int idComents;
   final String nameUser;
   final String emailComents;
   final String bodycoments;
 
-  const CommentsEntity(
+  const CommentsEntite(
       {required this.idpost,
       required this.idComents,
       required this.nameUser,

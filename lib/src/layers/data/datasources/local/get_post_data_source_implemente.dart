@@ -1,6 +1,6 @@
 // import 'package:dartz/dartz.dart';
 
-// import '../../../domain/entitys/post_entity.dart';
+// import '../../../domain/entites/post_entity.dart';
 // import '../../dto/post_dto.dart';
 // import '../get_post_datasources.dart';
 
