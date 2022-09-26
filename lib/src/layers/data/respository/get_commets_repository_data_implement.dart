@@ -1,6 +1,6 @@
 import 'package:clean_archecterter/src/layers/domain/entites/comments_entity.dart';
 
-import '../../domain/repositorys/comments/get_coments_domain_respository_abs.dart';
+import '../../domain/repositories/comments/get_coments_domain_respository_abs.dart';
 import '../datasources/get_comments_datasource.dart';
 
 class GetComentsRepositoryDataImplement implements GetCommentsRepository {

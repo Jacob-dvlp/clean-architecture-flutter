@@ -6,6 +6,6 @@ export '../../../../presetation/controllers/cubit_comment/cubit/get_comments_cub
 export '../../../data/datasources/get_comments_datasource.dart';
 export '../../../data/datasources/remote/get_comment_remote_datasource_implement.dart';
 export '../../../data/respository/get_commets_repository_data_implement.dart';
-export '../../../domain/repositorys/comments/get_coments_domain_respository_abs.dart';
+export '../../../domain/repositories/comments/get_coments_domain_respository_abs.dart';
 export '../../../domain/usecases/comments/get_coments_usecase_abs.dart';
 export '../../../domain/usecases/comments/get_coments_usecase_implemente.dart';  
