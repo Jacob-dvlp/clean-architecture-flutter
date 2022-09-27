@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:clean_archecterter/src/presetation/ui/comment_page/imports.dart';
+import 'package:clean_archecterter/src/presentation/ui/comment_page/imports.dart';
 import 'package:equatable/equatable.dart';
 
 part 'get_comments_state.dart';

@@ -1,9 +1,8 @@
 import 'dart:io';
 
-import 'package:bloc/bloc.dart';
+import 'package:clean_archecterter/src/presentation/ui/home_page/imports.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../../layers/domain/entites/post_entity.dart';
 import '../../../layers/domain/usecases/posts/get_post_usecase_abs.dart';
 
 part 'get_post_state.dart';
