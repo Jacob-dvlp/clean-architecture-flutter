@@ -1,5 +1,5 @@
-import '../../entites/post_entity.dart';
+import '../../usecases/posts/imports.dart';
 
 abstract class GetPostDomainRepository {
-  Future<List<PostEntity>> callPost();
+  Future<Either<ErrorCustomInterfaceFailure, List<PostEntity>>> callPost();
 }

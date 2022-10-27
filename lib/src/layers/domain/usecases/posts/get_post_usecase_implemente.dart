@@ -5,7 +5,7 @@ class GetPostUsecaseImplemente implements GetPostUsecase {
 
   GetPostUsecaseImplemente(this.getPostDomainRepository);
   @override
-  Future<List<PostEntity>> callPost() async {
+  Future<Either<ErrorCustomInterfaceFailure,List<PostEntity>>> callPost() async {
     return await getPostDomainRepository.callPost();
   }
 }

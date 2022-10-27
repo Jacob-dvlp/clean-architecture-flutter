@@ -1,5 +1,5 @@
 import '../../../../core/domain/services/http_services.dart';
-import '../../../domain/entites/post_entity.dart';
+import '../../../domain/usecases/posts/imports.dart';
 import '../../model/post_model.dart';
 import '../get_datasources.dart';
 
@@ -9,7 +9,8 @@ class GetPostRemoteDatasourcesImplement implements GetPostDatasources {
 
   GetPostRemoteDatasourcesImplement(this.httpServices);
   @override
-  Future<List<PostEntity>> callPost() async {
+  Future<Either<ErrorCustomInterfaceFailure, List<PostEntity>>>
+      callPost() async {
     final response = await httpServices.get('posts');
     if (response.statusCode == 200) {
       List<ModelPost> model = modelPostFromJson(response.body);

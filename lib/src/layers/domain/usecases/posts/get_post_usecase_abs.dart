@@ -1,5 +1,5 @@
 import 'imports.dart';
 
 abstract class GetPostUsecase {
-  Future<List<PostEntity>> callPost();
+  Future<Either<ErrorCustomInterfaceFailure, List<PostEntity>>> callPost();
 }
