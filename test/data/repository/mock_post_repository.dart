@@ -1,8 +1,7 @@
 import 'dart:io';
 
-import 'package:clean_archecterter/src/layers/core/dependecies/posts/imports.dart';
 import 'package:clean_archecterter/src/layers/data/model/post_model.dart';
-import 'package:clean_archecterter/src/layers/domain/entites/post_entity.dart';
+import 'package:clean_archecterter/src/layers/domain/usecases/posts/imports.dart';
 
 class MockPostRepository implements GetPostDomainRepository {
   @override
@@ -11,7 +10,6 @@ class MockPostRepository implements GetPostDomainRepository {
     final file = File('test/mocks/json/mock_post.json');
     final response = await file.readAsString();
     final data = modelPostFromJson(response);
-    model = data;
-    return model;
+    return model = data;
   }
 }

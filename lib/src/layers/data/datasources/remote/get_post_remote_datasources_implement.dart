@@ -1,3 +1,5 @@
+import 'package:clean_archecterter/src/layers/error/error_status.dart';
+
 import '../../../../core/domain/services/http_services.dart';
 import '../../../domain/usecases/posts/imports.dart';
 import '../../model/post_model.dart';
@@ -9,13 +11,13 @@ class GetPostRemoteDatasourcesImplement implements GetPostDatasources {
 
   GetPostRemoteDatasourcesImplement(this.httpServices);
   @override
-  Future<Either<ErrorCustomInterfaceFailure, List<PostEntity>>>
+  Future<List<PostEntity>>
       callPost() async {
     final response = await httpServices.get('posts');
-    if (response.statusCode == 200) {
+   
       List<ModelPost> model = modelPostFromJson(response.body);
       data = model;
-    }
+    
     return data;
   }
 }
